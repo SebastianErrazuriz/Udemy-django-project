@@ -141,8 +141,9 @@ MEDIA_URL = '/media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Messages
-from django.contrib.messages import constants as messages
+# from django.contrib.messages import constants as messages
+from django.contrib import messages
+
 MESSAGE_TAGS = {
-    messages.INFO: '',
-    50: 'critical',
+    messages.ERROR: 'danger'
 }
