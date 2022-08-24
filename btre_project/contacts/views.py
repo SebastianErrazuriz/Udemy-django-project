@@ -33,6 +33,7 @@ def contact(request):
         contact.save()
 
         # Send email
+        '''
         send_mail(
             'Property Listing Inquery',
             'There has been an inquery for ' + listing + '. Sign into the admin panel for more info',
@@ -40,7 +41,7 @@ def contact(request):
             [realtor_email, 's.errazuriz93@gmail.com'],
             fail_silently=False
         )
-
+        '''
         messages.success(request, 'Your request have been submitted, a realtor will get back to you son')
         return redirect('/listings/'+listing_id)
 
